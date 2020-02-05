@@ -6,6 +6,13 @@ cmake_minimum_required(VERSION 3.1)
 ##
 project(nlohmann_json VERSION 3.7.3 LANGUAGES CXX)
 
+find_package(catkin REQUIRED COMPONENTS
+    roscpp
+)
+catkin_package(
+    INCLUDE_DIRS include
+    LIBRARIES ${PROJECT_NAME}
+)
 ##
 ## INCLUDE
 ##
